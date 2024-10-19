@@ -1,0 +1,68 @@
+// home.component.scss
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pictogram-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-details {
+  text-align: center;
+}
+
+.image-details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.image-details p {
+  margin: 4px 0;
+  color: #666;
+}
+
+// home.component.scss
+
+button {
+  margin-top: 10px; // Adiciona espaço entre a imagem e o botão
+  transition: background-color 0.3s ease; // Animação suave para a cor de fundo
+
+  &:hover {
+    background-color: #ff4081; // Cor de fundo quando o mouse está sobre o botão
+  }
+}

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span class="title">Eugenio Pictogram Picker</span>
+</mat-toolbar>
+
+<div class="container">
+  <div class="search-container">
+    <form (ngSubmit)="onSearch()" class="search-form">
+      <mat-form-field appearance="fill" class="search-field">
+        <mat-label>Search Pictogram</mat-label>
+        <input matInput type="text" placeholder="Enter search term" [(ngModel)]="searchTerm" name="searchTerm" required>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Display the first image if it exists -->
+  <div class="image-container" *ngIf="characters.length > 0">
+    <img *ngIf="getImageUrl(characters[0]._id)" [src]="getImageUrl(characters[0]._id)" alt="Pictogram" class="pictogram-image" />
+    <div class="image-details">
+      <h2>{{ characters[0].keywords[0].keyword || 'No keyword available' }}</h2>
+      <p *ngFor="let keyword of characters[0].keywords">{{ keyword.meaning }}</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="downloadImage(characters[0]._id)">Download Image</button>
+  </div>
+</div>
