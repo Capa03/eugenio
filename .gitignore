@@ -1,42 +1,67 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Compiled output
 /dist
 /tmp
 /out-tsc
-/bazel-out
+/build
 
-# Node
+# Node.js modules
 /node_modules
-npm-debug.log
-yarn-error.log
+/npm-debug.log
+/yarn-error.log
+/pnpm-debug.log
+/.npm
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+# IDEs and Editors
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # System files
 .DS_Store
+Thumbs.db
+
+# Angular specific files
+.angular
+.angular/cache
+
+# Environment variables and secrets (for security)
+/src/environments/*.ts
+
+# Angular test reports
+/coverage
+/test-results
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Dependency directory (for projects using 'yarn' or other package managers)
+/.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/releases
+.yarn/plugins
+.yarn/sdks
+.yarn/versions
+
+# Miscellaneous
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Mac OS specific file
+.DS_Store
+
+# Windows specific files
 Thumbs.db
